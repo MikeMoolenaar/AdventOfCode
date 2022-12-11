@@ -1,0 +1,20 @@
+first column, opponent:
+- A Rock
+- B Paper
+- C Scissors
+
+Second column, me:
+- X Rock
+- Y Paper
+- Z Scissors
+
+Score per round:
+- Shape: 1 rock, 2 paper, 3 scissors
+- Outcome: 0 lost, 3 draw, 6 win
+
+Winning every time would be suspicious, so the responses must have been carefully chosen
+
+PART2:
+- X Lose 0
+- Y Draw 3
+- Z Win 6

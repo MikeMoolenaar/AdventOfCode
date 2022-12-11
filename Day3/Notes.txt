@@ -1,0 +1,11 @@
+2 halfs, 2 comparements in text
+
+Find item which is in both compartments
+Then calculate priority:
+a-z: 1 - 26
+A-Z: 27 - 52
+
+Sum op priority
+
+Mistakes:
+- Fucked up the for loop
