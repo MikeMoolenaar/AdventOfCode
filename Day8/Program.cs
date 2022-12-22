@@ -61,7 +61,7 @@ int CalculateViewingScore(string trees, (int,int) coords)
     }
     return i;
 }
-List<((int,int),int)> treeScores = new();
+List<((int,int) coords,int score)> treeScores = new();
 for (int rowi = 1; rowi < lines.Count - 1; rowi++)
 {
     for (int coli = 1; coli < lines[0].Length - 1; coli++)
@@ -81,12 +81,12 @@ for (int rowi = 1; rowi < lines.Count - 1; rowi++)
     }
 }
 
-void LogTreeScore(((int,int),int) treeScore) => 
-    Console.WriteLine($"{treeScore.Item1.Item1} {treeScore.Item1.Item2}: {treeScore.Item2}");
+void LogTreeScore(((int,int) coords,int score) treeScore) => 
+    Console.WriteLine($"{treeScore.coords.Item1} {treeScore.coords.Item2}: {treeScore.score}");
 
 // Console.WriteLine("All:");
 // foreach (var valueTuple in treeScores)
 //     LogTreeScore(valueTuple);
 
 Console.WriteLine("Highest one (x y score)");
-LogTreeScore(treeScores.MaxBy(x => x.Item2));
+LogTreeScore(treeScores.MaxBy(x => x.score));
