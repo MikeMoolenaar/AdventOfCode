@@ -1,0 +1,17 @@
+{
+  "author": "Mike Moolenaar",
+  "name": "Advent of code 2023 starter",
+  "description": "",
+  "identity": "MikeMoolenaar.ConsoleApp.AdventOfCode.1.0",
+  "shortName": "AdventOfCode2023",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "_Template",
+  "symbols": {
+    "Framework": {
+      "defaultValue": "net8.0"
+    }
+  }
+}
