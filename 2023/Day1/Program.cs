@@ -26,7 +26,6 @@ foreach (var line in lines)
             ints.Add(8);
         else if (curr.StartsWith("nine") || curr.StartsWith("9"))
             ints.Add(9);
-        
     }
 
     if (ints.Count == 1)
