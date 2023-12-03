@@ -29,15 +29,9 @@ foreach (var line in lines)
     }
 
     if (ints.Count == 1)
-    {
-        Console.WriteLine(ints[0].ToString() + ints[0]);
         globalCount += ints[0] * 10 + ints[0];
-    }
     else
-    {
-        Console.WriteLine(ints[0].ToString() + ints.Last());
-        globalCount +=  ints[0] * 10 + ints.Last();
-    }
+        globalCount += ints[0] * 10 + ints.Last();
 }
 
 Console.WriteLine();
