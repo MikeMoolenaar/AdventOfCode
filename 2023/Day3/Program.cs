@@ -5,7 +5,7 @@ var lineLength = lines[0].Length;
 
 string GetLinePart(int lineNr, int pos, int length)
 {
-    if (lineNr <= 0 || lines.Count <= lineNr)
+    if (lineNr < 0 || lineNr >= lines.Count)
         return string.Empty;
 
     var pos1 = Math.Max(pos - 1, 0);
@@ -93,6 +93,7 @@ var totalGearRatio = dict.Values
     .Where(x => x.Count == 2)
     .Select(x => x[0] * x[1])
     .Sum();
+
 Console.WriteLine();
 Console.WriteLine("Part 2: " + totalGearRatio);
 Console.WriteLine("Correct: " + (totalGearRatio == 91622824 ? "Yes": "No"));
