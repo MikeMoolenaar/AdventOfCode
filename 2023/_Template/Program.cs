@@ -1,3 +1,2 @@
-﻿var input = File.ReadAllText("Input.txt");
+﻿var lines = File.ReadLines("Input.txt").ToArray();
 
-Console.WriteLine(input);
