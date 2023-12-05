@@ -11,7 +11,7 @@ List<long> seeds = seedString.Groups[1]
 
 var regex = Regex.Matches(string.Join('\n', lines[2..]), @"(?!map:\n)(?:\d ?\n?)+");
 
-List<List<(long destRange, long sourceRangeStart, long length)>> almanacs = new();
+List<List<(long destRange, long sourceRangeStart, long length)>> maps = new();
 foreach (Match o in regex)
 {
     var map = new List<(long destRange, long sourceRangeStart, long length)>();
@@ -22,16 +22,15 @@ foreach (Match o in regex)
         map.Add((long.Parse(parts[0]), long.Parse(parts[1]), long.Parse(parts[2])));
     }
     
-    almanacs.Add(map);
+    maps.Add(map);
 }
 
 long GetSeedPosition(long seed)
 {
     long curPos = seed;
-    var positions = new List<long>();
-    for (int i = 0; i < almanacs.Count; i++)
+    foreach (var map in maps)
     {
-        foreach (var (destRange, sourceRangeStart, length) in almanacs[i])
+        foreach (var (destRange, sourceRangeStart, length) in map)
         {
             if (sourceRangeStart <= curPos && curPos < sourceRangeStart + length)
             {
