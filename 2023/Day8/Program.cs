@@ -71,13 +71,13 @@ Console.WriteLine($"\nFinished in {watch.ElapsedMilliseconds}ms");
 // Stolen from https://stackoverflow.com/questions/147515/least-common-multiple-for-3-or-more-numbers/29717490#29717490
 static long CalculateLcmFromList(List<long> numbers)
 {
-    return numbers.Aggregate(lcm);
+    return numbers.Aggregate(Lcm);
 }
-static long lcm(long a, long b)
+static long Lcm(long a, long b)
 {
-    return Math.Abs(a * b) / GCD(a, b);
+    return Math.Abs(a * b) / Gcd(a, b);
 }
-static long GCD(long a, long b)
+static long Gcd(long a, long b)
 {
-    return b == 0 ? a : GCD(b, a % b);
+    return b == 0 ? a : Gcd(b, a % b);
 }
