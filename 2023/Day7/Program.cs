@@ -25,10 +25,12 @@ int Calculate(bool isPart2 = false)
     return score;
 }
 
+// ============== Part 1
 var part1 = Calculate();
 Console.WriteLine("Part 1: " + part1);
 Console.WriteLine("Correct: " + (part1 == 255048101 ? "yes" : "no"));
 
+// ============== Part 2
 var part2 = Calculate(true);
 Console.WriteLine("Part 1: " + part2);
 Console.WriteLine("Correct: " + (part2 == 253718286 ? "yes" : "no"));

@@ -8,9 +8,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Include="Input.txt">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
+        <Content Include="Input.txt">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
     </ItemGroup>
 
 </Project>
