@@ -103,6 +103,7 @@ Console.WriteLine("Correct: " + (highestPipe?.Step == 7012 ? "yes" : "n5o"));
 Console.WriteLine();
 
 // ============== Part 2
+// TODO solve part 2 without a dirty hack, using some sort of flood fill algorithm
 int part2Count = 0;
 for (var y = 0; y < map.Count; y++)
 {
@@ -150,6 +151,5 @@ public record Pipe(short North, short East, short South, short West, (int y, int
     public char Sign { get; set; } = Sign;
     public int Step { get; set; } = 0;
     public bool Visited { get; set; } = false;
-    public int? GroupId { get; set; } = null;
 
 }
