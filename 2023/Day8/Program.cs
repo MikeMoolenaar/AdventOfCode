@@ -6,7 +6,6 @@ var lines = File.ReadLines("Input.txt").ToArray();
 var instructions = lines[0].ToCharArray();
 
 var dict = new Dictionary<string, (string left, string right)>();
-
 foreach (var node in lines[2..])
 {
     var matches = Regex.Matches(node, @"\w{3}");
