@@ -39,7 +39,6 @@ int Calculate(string[] pattern, bool part1)
 
     if (patternVertical != 0)
     {
-        // Console.WriteLine("Vertical="+patternVertical);
         return patternVertical;
     }
     
